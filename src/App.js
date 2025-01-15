@@ -19,7 +19,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <div className='bg-gray-800 w-full scroll-smooth'>
+      <div className='bg-gray-800 w-full snap overflow-hidden ' align='center'>
         <Navbar />
         <Hero />
         <Aboutme />

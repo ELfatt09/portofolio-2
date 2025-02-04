@@ -36,7 +36,7 @@ function Hero(props) {
         };
 
         typeWriter();
-    }, [jobs]);
+    }, []);
 
     return (
         <section className='snap-always snap-center overflow-hidden flex flex-col justify-start md:justify-center items-start w-full pt-10 md:pt-0 min-h-screen md:h-screen sm:items-center py-auto mb-[20vh] bg-gray-800'>

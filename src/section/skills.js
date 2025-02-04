@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion, useTransform, useScroll, useSpring, useMotionValue } from 'framer-motion';
-import { img } from 'motion/react-client';
+import { motion, useTransform, useScroll } from 'framer-motion';
 
 const skills = {
     backend: [

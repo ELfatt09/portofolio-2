@@ -30,7 +30,7 @@ function Navbar(props) {
                         <NavbarButton url='#Home'>Home</NavbarButton>
                         <NavbarButton url='#aboutme'>About Me</NavbarButton>
                         <NavbarButton url='#skills'>My Skills</NavbarButton>
-                        <NavbarButton url=''>Contact</NavbarButton>
+                        <NavbarButton url='#'>Contact</NavbarButton>
                     </motion.ul>
                 </div>
                 <motion.button
@@ -54,9 +54,9 @@ function Navbar(props) {
                 transition={{ duration: 0.5 }}
             >
                 <ul className='flex flex-col gap-2'>
-                    <NavbarButton url='#'>Home</NavbarButton>
-                    <NavbarButton url='#'>About Me</NavbarButton>
-                    <NavbarButton url='#'>My Skills</NavbarButton>
+                    <NavbarButton url='#Home'>Home</NavbarButton>
+                    <NavbarButton url='#aboutMe'>About Me</NavbarButton>
+                    <NavbarButton url='#mySkills'>My Skills</NavbarButton>
                     <NavbarButton url='#'>Contact</NavbarButton>
                 </ul>
             </motion.div>
@@ -65,5 +65,6 @@ function Navbar(props) {
 }
 
 export default Navbar;
+
 
 

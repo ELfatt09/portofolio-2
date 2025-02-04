@@ -16,7 +16,7 @@ function Navbar(props) {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 1 }}
             >
-                <a href='#'
+                <a href='#home'
                     className='font-bold font-serif mr-4 block cursor-pointer py-1.5 text-base text-emerald-600 md:text-lg'>
                     Sevalino Elfata
                 </a>
@@ -27,10 +27,10 @@ function Navbar(props) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
                     >
-                        <NavbarButton url='#Home'>Home</NavbarButton>
+                        <NavbarButton url='#home'>Home</NavbarButton>
                         <NavbarButton url='#aboutme'>About Me</NavbarButton>
                         <NavbarButton url='#skills'>My Skills</NavbarButton>
-                        <NavbarButton url='#'>Contact</NavbarButton>
+                        <NavbarButton url='#skills'>Contact</NavbarButton>
                     </motion.ul>
                 </div>
                 <motion.button
@@ -54,10 +54,10 @@ function Navbar(props) {
                 transition={{ duration: 0.5 }}
             >
                 <ul className='flex flex-col gap-2'>
-                    <NavbarButton url='#Home'>Home</NavbarButton>
-                    <NavbarButton url='#aboutMe'>About Me</NavbarButton>
-                    <NavbarButton url='#mySkills'>My Skills</NavbarButton>
-                    <NavbarButton url='#'>Contact</NavbarButton>
+                    <NavbarButton url='#home'>Home</NavbarButton>
+                    <NavbarButton url='#aboutme'>About Me</NavbarButton>
+                    <NavbarButton url='#skills'>My Skills</NavbarButton>
+                    <NavbarButton url='#skills'>Contact</NavbarButton>
                 </ul>
             </motion.div>
         </motion.nav>
@@ -65,6 +65,4 @@ function Navbar(props) {
 }
 
 export default Navbar;
-
-
 

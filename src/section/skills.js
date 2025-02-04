@@ -59,6 +59,7 @@ function Skills() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            id='skills'
             className='bg-gray-800 h-auto w-full z-10 snap-always snap-center px-3 py-10 md:py-20'>
             <div className='flex flex-col md:flex-row h-fit md:h-screen gap-10 md:gap-20 items-center'>
                 <div className='flex items-center h-full md:h-fit md:w-1/2 p-10 overflow-y-auto'>

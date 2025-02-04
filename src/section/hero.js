@@ -8,35 +8,33 @@ function Hero(props) {
     useEffect(() => {
         const jobTitle = jobTitleRef.current;
         let currentJob = 0;
+        let charIndex = 0;
+        let typing = true;
+
         const typeWriter = () => {
-            if (currentJob >= jobs.length) {
-                currentJob = 0;
-            }
-            let job = jobs[currentJob];
-            let charIndex = 0;
-            let goingBack = false;
-            let active = true;
-            const interval = setInterval(() => {
-                if (!goingBack && active) {
-                    jobTitle.textContent = job.substring(0, charIndex) + (charIndex < job.length ? '_' : '');
-                    charIndex += 1;
-                    if (charIndex >= job.length) {
-                        setTimeout(() => goingBack = true, 1000);
-                    }
+            const currentText = jobs[currentJob];
+            if (typing) {
+                jobTitle.textContent = currentText.substring(0, charIndex) + (charIndex < currentText.length ? '|' : '');
+                charIndex++;
+                if (charIndex > currentText.length) {
+                    typing = false;
+                    setTimeout(typeWriter, 1000);
                 } else {
-                    jobTitle.textContent = job.substring(0, charIndex) + (charIndex < job.length ? '_' : '');
-                    charIndex -= 1;
-                    if (charIndex <= 0) {
-                        goingBack = false;
-                        currentJob++;
-                        active = false;
-                        clearInterval(interval);
-                        typeWriter();
-                    }
+                    setTimeout(typeWriter, 100);
                 }
-            }, 50); // Slightly increase the interval for smoother animation
-            return () => clearInterval(interval);
-        }
+            } else {
+                jobTitle.textContent = currentText.substring(0, charIndex) + '|';
+                charIndex--;
+                if (charIndex < 0) {
+                    typing = true;
+                    currentJob = (currentJob + 1) % jobs.length;
+                    setTimeout(typeWriter, 500);
+                } else {
+                    setTimeout(typeWriter, 50);
+                }
+            }
+        };
+
         typeWriter();
     }, [jobs]);
 

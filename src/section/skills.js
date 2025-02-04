@@ -95,7 +95,7 @@ function SkillCard({ skill, scrollProgress }) {
     return (
         <motion.div
             initial={{ scale: 0.6, opacity: 0.4 }}
-            whileInView={{ scale: 0.85, opacity: 0.4 }}
+            whileInView={{ scale: 0.85, opacity: 0.7 }}
             whileHover={{ scale: 0.9, opacity: 1, transition: { duration: 0.5, type: 'spring', delay: 0 } }}
             transition={{ duration: 0.7, type: 'tween', delay: 1 }}
             className='min-h-[35vh] snap-always snap-center w-full rounded-2xl  shadow-none hover:shadow-lg hover:shadow-emerald-500 my-10 md:my-40 border-none '>
